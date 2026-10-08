@@ -1,0 +1,27 @@
+{
+  "name": "react-pdf-11-upgrade",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build --turbopack",
+    "start": "next start",
+    "build:legacy": "node scripts/run.mjs legacy build --turbopack",
+    "start:legacy": "node scripts/run.mjs legacy start -p 3001",
+    "check": "node scripts/check-browsers.mjs",
+    "measure": "node scripts/measure-scroll.mjs",
+    "versions": "node -e \"const p=n=>require(n+'/package.json').version; console.log('next',p('next'));console.log('react-pdf',p('react-pdf'));console.log('pdfjs-dist',p('pdfjs-dist'))\""
+  },
+  "dependencies": {
+    "next": "^16.4.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-pdf": "11.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "playwright-core": "^1.55.0",
+    "typescript": "^5.6.0"
+  }
+}
